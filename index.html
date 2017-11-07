@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Банк</title>
+    <title>ИП Бородин</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -40,11 +40,11 @@
                             <img src="images/visa.png" height="40" width="40" alt="visa" />
                             <img src="images/mastercard.png" height="40" width="40" alt="mastercard" />
                         </div>
-                        <input type="text" id="card-number" class="card-number" placeholder="Номер карты" required pattern="[0-9]{16}">
-                        <input type="text" id="card-date" class="card-date" placeholder="ММ/ГГ" required pattern="(0[1-9]|1[0-2])/(1[7-9]|2[0-9]|3[0-5])">
-                        <input type="text" id="card-cvc" class="card-cvc" placeholder="CVC" required pattern="[0-9]{3}">
+                        <input type="text" id="card_number" class="card_number" placeholder="Номер карты" required pattern="[0-9]{16}">
+                        <input type="text" id="card_date" class="card__date" placeholder="ММ/ГГ" required pattern="(0[1-9]|1[0-2])/(1[7-9]|2[0-9]|3[0-5])">
+                        <input type="text" id="card_cvc" class="card__cvc" placeholder="CVC" required pattern="[0-9]{3}">
                     </div>
-                    <div class="any-bank-info">
+                    <div class="any-bank_info">
                         <ul class="form-list">
                             <li>
                                 <label for="any-bank_amount">Сумма:</label>
@@ -56,7 +56,7 @@
                             </li>
                             <li>
                                 <label for="any-bank_email">Ваша эл. почта:</label>
-                                <input type="email" id="any-bank_email" placeholder="Для квитанций об оплате">
+                                <input type="email" id="any-bank_email" placeholder="Для квитанций об оплате" required>
                             </li>
                             <li>
                                 <div class="beautiful_button">
@@ -76,33 +76,33 @@
                             <h4>Сформируйте платёжку и загрузите её в свой банк для подписи</h4>
                         </li>
                         <li>
-                            <label for="my-bank_user_id">ИНН получателя:</label>
-                            <input type="text" id="my-bank_user_id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
+                            <label for="my-bank_user-id">ИНН получателя:</label>
+                            <input type="text" id="my-bank_user-id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
                         </li>
                         <li>
-                            <label for="my-bank_bank_id">БИК:</label>
-                            <input type="text" id="my-bank_bank_id" required pattern="\d{9}">
+                            <label for="my-bank_bank-id">БИК:</label>
+                            <input type="text" id="my-bank_bank-id" required pattern="\d{9}">
                         </li>
                         <li>
-                            <label for="my-bank_account_number">Номер счёта:</label>
-                            <input type="text" id="my-bank_account_number" required pattern="\d{20}">
+                            <label for="my-bank_account-number">Номер счёта:</label>
+                            <input type="text" id="my-bank_account-number" required pattern="\d{20}">
                         </li>
                         <li>
-                            <label for="my-bank_for_what">За что:</label>
-                            <div class="list_radio_button">
-                                <input type="text" id="my-bank_for_what" disabled>
+                            <label for="my-bank_for-what">За что:</label>
+                            <div class="list-radio-button">
+                                <input type="text" id="my-bank_for-what" disabled>
                                 <br>
-                                <input type="radio" id="my-bank_without_VAT" name="VAT" value="0">
-                                <label for="my-bank_without_VAT">Без НДС</label>
-                                <input type="radio" id="my-bank_VAT_18" name="VAT" value="18">
-                                <label for="my-bank_VAT_18">НДС 18%</label>
-                                <input type="radio" id="my-bank_VAT_10" name="VAT" value="10">
-                                <label for="my-bank_VAT_10">НДС 10%</label>
+                                <input type="radio" id="my-bank_without-VAT" name="VAT" value="0">
+                                <label for="my-bank_without-VAT">Без НДС</label>
+                                <input type="radio" id="my-bank_VAT-18" name="VAT" value="18">
+                                <label for="my-bank_VAT-18">НДС 18%</label>
+                                <input type="radio" id="my-bank_VAT-10" name="VAT" value="10">
+                                <label for="my-bank_VAT-10">НДС 10%</label>
                             </div>
                         </li>
                         <li>
-                            <label for="my-bank_how_many">Сколько:</label>
-                            <input type="number" id="my-bank_how_many" required min="1000" max="75000" step="1000">
+                            <label for="my-bank_how-many">Сколько:</label>
+                            <input type="number" id="my-bank_how-many" required min="1000" max="75000" step="1000">
                         </li>
                         <li>
                             <div class="beautiful_button">
@@ -123,41 +123,41 @@
                             подпишет её у себя в Интернет-банке</h4>
                     </li>
                     <li>
-                        <label for="request-payment_user_id">ИНН получателя:</label>
-                        <input type="text" id="request-payment_user_id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
+                        <label for="request-payment_user-id">ИНН получателя:</label>
+                        <input type="text" id="request-payment_user-id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
                     </li>
                     <li>
-                        <label for="request-payment_bank_id">БИК:</label>
-                        <input type="text" id="request-payment_bank_id" required pattern="\d{9}">
+                        <label for="request-payment_bank-id">БИК:</label>
+                        <input type="text" id="request-payment_bank-id" required pattern="\d{9}">
                     </li>
                     <li>
-                        <label for="request-payment_account_number">Номер счёта:</label>
-                        <input type="text" id="request-payment_account_number" required pattern="\d{20}">
+                        <label for="request-payment_account-number">Номер счёта:</label>
+                        <input type="text" id="request-payment_account-number" required pattern="\d{20}">
                     </li>
                     <li>
-                        <label for="request-payment_for_what">За что:</label>
-                        <div class="list_radio_button">
-                            <input type="text" id="request-payment_for_what" disabled>
+                        <label for="request-payment_for-what">За что:</label>
+                        <div class="list-radio-button">
+                            <input type="text" id="request-payment_for-what" disabled>
                             <br>
-                            <input type="radio" id="request-payment_without_VAT" name="VAT" value="0">
-                            <label for="request-payment_without_VAT">Без НДС</label>
-                            <input type="radio" id="request-payment_VAT_18" name="VAT" value="18">
-                            <label for="request-payment_VAT_18">НДС 18%</label>
-                            <input type="radio" id="request-payment_VAT_10" name="VAT" value="10">
-                            <label for="request-payment_VAT_10">НДС 10%</label>
+                            <input type="radio" id="request-payment_without-VAT" name="VAT" value="0">
+                            <label for="request-payment_without-VAT">Без НДС</label>
+                            <input type="radio" id="request-payment_VAT-18" name="VAT" value="18">
+                            <label for="request-payment_VAT-18">НДС 18%</label>
+                            <input type="radio" id="request-payment_VAT-10" name="VAT" value="10">
+                            <label for="request-payment_VAT-10">НДС 10%</label>
                         </div>
                     </li>
                     <li>
-                        <label for="request-payment_how_many">Сколько:</label>
-                        <input type="number" id="request-payment_how_many" required min="1000" max="75000" step="1000">
+                        <label for="request-payment_how-many">Сколько:</label>
+                        <input type="number" id="request-payment_how-many" required min="1000" max="75000" step="1000">
                     </li>
                     <li>
-                        <label for="request-payment_phone_number">Номер телефона:</label>
-                        <input type="text" id="request-payment_phone_number">
+                        <label for="request-payment_phone-number">Номер телефона:</label>
+                        <input type="text" id="request-payment_phone-number">
                     </li>
                     <li>
                         <label for="request-payment_email">Электронная почта:</label>
-                        <input type="email" id="request-payment_email" placeholder="Для уведомлений об оплате">
+                        <input type="email" id="request-payment_email" placeholder="Для уведомлений об оплате" required>
                     </li>
                     <li>
                         <div class="beautiful_button">
@@ -171,19 +171,25 @@
             <h3><a name="company-info">О компании ИП Бородин Георгий Дмитриевич</a></h3>
             <div class="services">
                 <div class="service">
-                    <div class="image_container"><img class="image_services" src="images/ring.jpg" alt="кольцо из монеты"></div>
-                    <div class="service_name"><p>Кольцо из настоящего франка.</p></div>
-                    <div class="service_price"><p>3200₽</p></div>
+                    <div class="image_container">
+                        <img class="image_services" src="images/ring.jpg" alt="кольцо из монеты">
+                    </div>
+                    <div class="service__name"><p>Кольцо из настоящего франка.</p></div>
+                    <div class="service__price"><p>3200₽</p></div>
                 </div>
                 <div class="service">
-                    <div class="image_container"><img class="image_services" src="images/cookies.jpg" alt="овсяное печенье"></div>
-                    <div class="service_name"><p>Овсяное печенье с кусочками темного шоколада.</p></div>
-                    <div class="service_price"><p>99₽</p></div>
+                    <div class="image_container">
+                        <img class="image_services" src="images/cookies.jpg" alt="овсяное печенье">
+                    </div>
+                    <div class="service__name"><p>Овсяное печенье с кусочками темного шоколада.</p></div>
+                    <div class="service__price"><p>99₽</p></div>
                 </div>
                 <div class="service">
-                    <div class="image_container"><img class="image_services" src="images/notebook.jpg" alt="блокнот"></div>
-                    <div class="service_name"><p>Многие думают...</p></div>
-                    <div class="service_price"><p>490₽</p></div>
+                    <div class="image_container">
+                        <img class="image_services" src="images/notebook.jpg" alt="блокнот">
+                    </div>
+                    <div class="service__name"><p>Многие думают...</p></div>
+                    <div class="service__price"><p>490₽</p></div>
                 </div>
             </div>
         </section>

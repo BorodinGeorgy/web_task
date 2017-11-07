@@ -3,10 +3,12 @@ html
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .all
 {
     width: 100%;
 }
+
 header,
 main,
 .client-info,
@@ -15,6 +17,7 @@ main,
     width: 80%;
     margin: 0 auto;
 }
+
 .header
 {
     display: inline-block;
@@ -117,6 +120,7 @@ input[value="my-bank"] + label:before
     max-width:90%;
     margin-top: 20px;
 }
+
 .any-bank,
 .my-bank
 {
@@ -138,21 +142,23 @@ input[value="my-bank"] + label:before
     float: right;
     margin: 20px;
 }
-.card > .card-number
+
+.card > .card__number
 {
     display: block;
     width: 200px;
     margin: 10px;
 }
-.card >.card-date,
-.card >.card-cvc
+
+.card >.card__date,
+.card >.card__cvc
 {
     width: 50px;
     margin: 10px;
     text-align: center;
 }
 
-.any-bank-info
+.any-bank_info
 {
     width: 500px;
     display: inline-block;
@@ -163,7 +169,7 @@ input[value="my-bank"] + label:before
     margin: 0;
     padding: 0;
     width: 100%;
-    list-style-type:none;
+    list-style-type: none;
 }
 
 .form-list li
@@ -174,11 +180,12 @@ input[value="my-bank"] + label:before
 .form-list label
 {
     vertical-align: top;
-    width:150px;
+    width: 150px;
     margin-top: 3px;
-    display:inline-block;
-    padding:3px;
+    display: inline-block;
+    padding: 3px;
 }
+
 input:focus,
 textarea
 {
@@ -195,9 +202,9 @@ input[type="email"],
 input[type="number"],
 textarea
 {
-    height:20px;
-    width:220px;
-    padding:5px 8px;
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
     border: none;
     background: none;
     border-bottom: 1px solid lightgrey;
@@ -222,15 +229,18 @@ textarea:focus
     border: 1px solid #d9ade8;
 }
 
-.list_radio_button
+.list-radio-button
 {
     display: inline-block;
 }
-.list_radio_button label
+
+.list-radio-button label
 {
 
-    margin: 0 5px;
-    display: inline;
+    margin: 0 1%;
+    padding: 0;
+    display: inline-block;
+    width: 30%;
     color: #0572c1;
 }
 
@@ -246,6 +256,7 @@ input[name="VAT"]:checked + label
     height: 65px;
     width: 250px;
 }
+
 .beautiful_button > button
 {
     opacity: .7;
@@ -282,8 +293,8 @@ input[name="VAT"]:checked + label
     margin: 5%;
 
 }
-.service_name,
-.service_price
+.service__name,
+.service__price
 {
     margin: 0 1%;
     text-align: center;
@@ -298,7 +309,7 @@ input[name="VAT"]:checked + label
 {
     .header,
     .client-info,
-    .any-bank-info
+    .any-bank_info
     {
         display: block;
         width: 90%;
@@ -315,7 +326,7 @@ input[name="VAT"]:checked + label
         display: block;
     }
 
-    .list_radio_button label
+    .list-radio-button label
     {
         display: inline;
     }
@@ -323,7 +334,7 @@ input[name="VAT"]:checked + label
     .services .service
     {
         display: block;
-        width: 50%;
+        width: 80%;
         margin: 10px auto;
     }
 }
