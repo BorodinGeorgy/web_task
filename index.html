@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Банк</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,7 @@
                             </li>
                             <li>
                                 <label for="any-bank_amount">Сумма:</label>
-                                <input type="text" id="any-bank_amount" placeholder="от 1000 до 75000 рублей" required pattern="([1-6]\d{3,4})|([7-9][0-4]\d{3})|([7-9][5-9]\d{2})|(75000)">
+                                <input type="number" id="any-bank_amount" placeholder="от 1000 до 75000 рублей" required min="1000" step="1000" max="75000">
                             </li>
                             <li>
                                 <label for="any-bank_comment">Комментарий:</label>
@@ -104,7 +105,7 @@
                         </li>
                         <li>
                             <label for="my-bank_how_many">Сколько:</label>
-                            <input type="text" id="my-bank_how_many" required pattern="([1-6]\d{3,4})|([7-9][0-4]\d{3})|([7-9][5-9]\d{2})|(75000)">
+                            <input type="number" id="my-bank_how_many" required min="1000" max="75000" step="1000">
                         </li>
                         <li>
                             <div class="beautiful_button">
@@ -151,7 +152,7 @@
                     </li>
                     <li>
                         <label for="request-payment_how_many">Сколько:</label>
-                        <input type="text" id="request-payment_how_many" required pattern="([1-6]\d{3,4})|([7-9][0-4]\d{3})|([7-9][5-9]\d{2})|(75000)">
+                        <input type="number" id="request-payment_how_many" required min="1000" max="75000" step="1000">
                     </li>
                     <li>
                         <label for="request-payment_phone_number">Номер телефона:</label>
@@ -193,13 +194,12 @@
 </div>
 <hr>
 <footer>
-    <p>копирайт</p>
-    <a href="https://vk.com/share.php?url=" title="Поделиться в vk" target="_blank">
-        <img class="icons" src="images/vk.png" alt="vk"></a>
-    <a href="http://www.facebook.com/sharer.php?url=" title="Поделиться в facebook" target="_blank">
-        <img class="icons" src="images/fb.png" alt="fb"></a>
-    <a href="http://twitter.com/share?url=" title="Твитнуть" target="_blank">
-        <img class="icons" src="images/tw.png" alt="tw"></a>
+    <a href="http://vk.com/share.php?url=http://" target="_blank"
+       class="shareButton vk"><span class="fa fa-vk"></span> Поделиться</a>
+    <a href="https://facebook.com/sharer.php?url=http://" target="_blank"
+       class="shareButton facebook"><span class="fa fa-facebook"></span> Поделиться</a>
+    <a href="https://twitter.com/intent/tweet?url=http://" target="_blank"
+       class="shareButton twitter"><span class="fa fa-twitter"></span> Твитнуть</a>
 </footer>
 </body>
 </html>
