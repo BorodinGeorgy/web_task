@@ -283,13 +283,16 @@ input[name="VAT"]:checked + label
     opacity: .5;
 }
 
+.services
+{
+    display: flex;
+}
+
 .services > .service
 {
-    display: inline-block;
     width: 30%;
     margin: 0 1%;
     border: 1px solid #c0bfe8;
-    vertical-align: top;
 }
 .services > .service:hover
 {
@@ -340,6 +343,10 @@ input[name="VAT"]:checked + label
         display: inline;
     }
 
+    .services
+    {
+        flex-direction: column;
+    }
     .services .service
     {
         display: block;
