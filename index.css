@@ -11,47 +11,48 @@ html
 
 header,
 main,
-.client-info,
-.services
+.header__link,
+.company__services
 {
     width: 80%;
     margin: 0 auto;
 }
 
-.header
+.header__text,
+.header__photo
 {
     display: inline-block;
     vertical-align: top;
     padding: 2%;
 }
 
-.header_text
+.header__text
 {
     width: 72%;
 }
 
-.header_photo
+.header__photo
 {
     width: 19%;
 }
-.header_photo img
+.header__photo img
 {
     max-width: 200px;
-    border-radius: 50% 50%;
+    border-radius: 50%;
 }
 
-.client-info
+.header__link
 {
     padding:10px;
 }
 
-.client-info a,
+.header__link,
 footer a
 {
     color: #0572c1;
 }
 
-.client-info a:visited
+.header__link:visited
 {
     color: #c0bfe8;
 }
@@ -64,11 +65,6 @@ input[type="radio"]
 input ~ label
 {
     cursor: pointer;
-}
-
-.actions-with-payment + label
-{
-    margin: 10px;
 }
 
 input[name="actions-with-payment"] + label,
@@ -85,9 +81,9 @@ input[name="actions-with-payment"]:checked + label
 }
 
 input[value="request-payment"]:not(:checked) ~ .request-payment,
-input[value="pay"]:not(:checked) ~ .pay,
-input[value="my-bank"]:not(:checked) ~ .my-bank,
-input[value="any-bank"]:not(:checked) ~ .any-bank
+input[value="pay"]:not(:checked) ~ .payment,
+input[value="my-bank"]:not(:checked) ~ .payment__my-bank,
+input[value="any-bank"]:not(:checked) ~ .payment__any-bank
 {
     display: none;
 }
@@ -114,20 +110,20 @@ input[value="my-bank"] + label:before
 }
 
 .request-payment,
-.pay,
-.services
+.payment,
+.company__services
 {
     max-width:90%;
     margin-top: 20px;
 }
 
-.any-bank,
-.my-bank
+.payment__any-bank,
+.payment__my-bank
 {
     margin: 20px 0;
 }
 
-.card
+.form__card
 {
     display: inline-block;
     width: 300px;
@@ -137,34 +133,34 @@ input[value="my-bank"] + label:before
     box-shadow: 2px 2px 10px #c0bfe8;
 }
 
-.card > .payment-system
+.form__card > .card__payment-system
 {
     float: right;
     margin: 20px;
 }
 
-.card > .card__number
+.form__card > .card__number
 {
     display: block;
     width: 200px;
     margin: 10px;
 }
 
-.card >.card__date,
-.card >.card__cvc
+.form__card > .card__date,
+.form__card > .card__cvc
 {
     width: 50px;
     margin: 10px;
     text-align: center;
 }
 
-.any-bank_info
+.form__info
 {
     width: 500px;
     display: inline-block;
 }
 
-.form-list
+.form__list
 {
     margin: 0;
     padding: 0;
@@ -172,12 +168,12 @@ input[value="my-bank"] + label:before
     list-style-type: none;
 }
 
-.form-list li
+.form__item
 {
     padding:12px 12px 12px 0;
 }
 
-.form-list label
+.form__list label
 {
     vertical-align: top;
     width: 150px;
@@ -258,7 +254,7 @@ input[name="VAT"]:checked + label
     color: #000;
 }
 
-.beautiful_button
+.button_beautiful
 {
     position: relative;
     background: url("images/buttom_background.png");
@@ -266,7 +262,7 @@ input[name="VAT"]:checked + label
     width: 250px;
 }
 
-.beautiful_button > button
+.button_beautiful > button
 {
     opacity: .7;
     position: absolute;
@@ -278,33 +274,38 @@ input[name="VAT"]:checked + label
     width: 240px;
 }
 
-.beautiful_button > button:hover
+.button_beautiful > button:hover
 {
     opacity: .5;
 }
 
-.services
+.company__services
 {
     display: flex;
 }
 
-.services > .service
+.company__services > .service
 {
     width: 30%;
     margin: 0 1%;
     border: 1px solid #c0bfe8;
 }
-.services > .service:hover
+.company__services > .company__service:hover
 {
     box-shadow: 2px 2px 10px #c0bfe8;
 }
-.image_services
+.service__image-container
 {
     width: 90%;
-    height: 90%;
     margin: 5%;
 
 }
+
+.service__image
+{
+    width: 100%;
+}
+
 .service__name,
 .service__price
 {
@@ -319,21 +320,22 @@ input[name="VAT"]:checked + label
 
 @media screen and (max-width: 768px)
 {
-    .header,
-    .client-info,
-    .any-bank_info
+    .header__photo,
+    .header__text,
+    .header__link,
+    .form__info
     {
         display: block;
         width: 90%;
     }
 
-    .header_photo
+    .header__photo
     {
         width: 200px;
     }
 
-    .form-list label,
-    .card
+    .form__list label,
+    .form__card
     {
         display: block;
     }
@@ -343,11 +345,12 @@ input[name="VAT"]:checked + label
         display: inline;
     }
 
-    .services
+    .company__services
     {
         flex-direction: column;
     }
-    .services .service
+
+    .company__services .company__service
     {
         display: block;
         width: 80%;

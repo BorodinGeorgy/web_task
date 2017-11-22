@@ -9,15 +9,15 @@
 </head>
 <body>
 <div class="all">
-    <header>
-        <div class="header header_text">
+    <header class="header">
+        <div class="header__text">
             <h2>Индивидуальный предприниматель Бородин Георгий Дмитриевич</h2>
-            <span class="client-info"><a href="tel:+1234567890">+1234567890</a></span>
-            <span class="client-info"><a href="https://github.com/BorodinGeorgy">github.com/BorodinGeorgy</a></span>
-            <span class="client-info"><a href="mailto:georgii1605@gmail.com">georgii1605@gmail.com</a></span>
-            <p><span class="client-info"><a href="#company-info">Информация о компании</a></span></p>
+            <a class="header__link" href="tel:+1234567890">+1234567890</a>
+            <a class="header__link" href="https://github.com/BorodinGeorgy">github.com/BorodinGeorgy</a>
+            <a class="header__link" href="mailto:georgii1605@gmail.com">georgii1605@gmail.com</a>
+            <p><a class="header__link" href="#company-info">Информация о компании</a></p>
         </div>
-        <div class="header header_photo">
+        <div class="header__photo">
             <img src="images/photo.jpg"/>
         </div>
     </header>
@@ -27,39 +27,39 @@
         <label for="pay"><strong>Заплатить</strong></label>
         <input type="radio" name="actions-with-payment" id="request-payment" value="request-payment">
         <label for="request-payment"><strong>Запросить платёж</strong></label>
-        <section class="pay">
+        <section class="payment">
             <input type="radio" name="choose-bank" id="from-any-bank" value="any-bank" checked>
             <label for="from-any-bank">С карты любого банка</label>
             <input type="radio" name="choose-bank" id="from-my-bank" value="my-bank">
             <label for="from-my-bank">Из своего интернет-банка</label>
 
-            <section class="any-bank">
-                <form class="any-bank_form" action="" method="post" name="any-bank_form">
-                    <div class="card">
-                        <div class="payment-system">
+            <section class="payment__any-bank">
+                <form class="payment__form_any-bank form" action="" method="post" name="any-bank_form">
+                    <div class="form__card card">
+                        <div class="card__payment-system">
                             <img src="images/visa.png" height="40" width="40" alt="visa" />
                             <img src="images/mastercard.png" height="40" width="40" alt="mastercard" />
                         </div>
-                        <input type="text" id="card_number" class="card_number" placeholder="Номер карты" required pattern="[0-9]{16}">
+                        <input type="text" id="card_number" class="card__number" placeholder="Номер карты" required pattern="[0-9]{16}">
                         <input type="text" id="card_date" class="card__date" placeholder="ММ/ГГ" required pattern="(0[1-9]|1[0-2])/(1[7-9]|2[0-9]|3[0-5])">
                         <input type="text" id="card_cvc" class="card__cvc" placeholder="CVC" required pattern="[0-9]{3}">
                     </div>
-                    <div class="any-bank_info">
-                        <ul class="form-list">
-                            <li>
+                    <div class="form__info">
+                        <ul class="form__list">
+                            <li class="form__item">
                                 <label for="any-bank_amount">Сумма:</label>
                                 <input type="number" id="any-bank_amount" placeholder="от 1000 до 75000 рублей" required min="1000" max="75000">
                             </li>
-                            <li>
+                            <li class="form__item">
                                 <label for="any-bank_comment">Комментарий:</label>
                                 <textarea id="any-bank_comment" placeholder="до 150 символов" maxlength="150"></textarea>
                             </li>
-                            <li>
+                            <li class="form__item">
                                 <label for="any-bank_email">Ваша эл. почта:</label>
                                 <input type="email" id="any-bank_email" placeholder="Для квитанций об оплате" required>
                             </li>
-                            <li>
-                                <div class="beautiful_button">
+                            <li class="form__item">
+                                <div class="button_beautiful">
                                     <button class="submit" type="submit">
                                         <strong>Заплатить</strong>
                                     </button>
@@ -69,25 +69,25 @@
                     </div>
                 </form>
             </section>
-            <section class="my-bank">
-                <form class="my-bank_form" action="" method="post" name="my-bank_form">
-                    <ul class="form-list">
-                        <li>
+            <section class="payment__my-bank">
+                <form class="payment__form_my-bank form" action="" method="post" name="my-bank_form">
+                    <ul class="form__list">
+                        <li class="form__item">
                             <h4>Сформируйте платёжку и загрузите её в свой банк для подписи</h4>
                         </li>
-                        <li>
+                        <li class="form__item">
                             <label for="my-bank_user-id">ИНН получателя:</label>
                             <input type="text" id="my-bank_user-id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
                         </li>
-                        <li>
+                        <li class="form__item">
                             <label for="my-bank_bank-id">БИК:</label>
                             <input type="text" id="my-bank_bank-id" required pattern="\d{9}">
                         </li>
-                        <li>
+                        <li class="form__item">
                             <label for="my-bank_account-number">Номер счёта:</label>
                             <input type="text" id="my-bank_account-number" required pattern="\d{20}">
                         </li>
-                        <li>
+                        <li class="form__item">
                             <label for="my-bank_for-what">За что:</label>
                             <div class="list-radio-button">
                                 <input type="text" id="my-bank_for-what" disabled>
@@ -100,12 +100,12 @@
                                 <label for="my-bank_VAT-10">НДС 10%</label>
                             </div>
                         </li>
-                        <li>
+                        <li class="form__item">
                             <label for="my-bank_how-many">Сколько:</label>
                             <input type="number" id="my-bank_how-many" required min="1000" max="75000">
                         </li>
-                        <li>
-                            <div class="beautiful_button">
+                        <li class="form__item">
+                            <div class="button_beautiful">
                                 <button class="submit" type="submit">
                                     <strong>Получить файл для интернет-банка</strong>
                                 </button>
@@ -116,25 +116,25 @@
             </section>
         </section>
         <section class="request-payment">
-            <form class="request-payment_form" action="" method="post" name="request-payment_form">
-                <ul class="form-list">
-                    <li>
+            <form class="request-payment__form form" action="" method="post" name="request-payment_form">
+                <ul class="form__list">
+                    <li class="form__item">
                         <h4>Создайте платёжку, а Индивидуальный предприниматель Бородин Георгий Дмитриевич
                             подпишет её у себя в Интернет-банке</h4>
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_user-id">ИНН получателя:</label>
                         <input type="text" id="request-payment_user-id" placeholder="ИНН или название плательщика" required pattern="\d{10}|\d{12}">
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_bank-id">БИК:</label>
                         <input type="text" id="request-payment_bank-id" required pattern="\d{9}">
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_account-number">Номер счёта:</label>
                         <input type="text" id="request-payment_account-number" required pattern="\d{20}">
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_for-what">За что:</label>
                         <div class="list-radio-button">
                             <input type="text" id="request-payment_for-what" disabled>
@@ -147,48 +147,49 @@
                             <label for="request-payment_VAT-10">НДС 10%</label>
                         </div>
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_how-many">Сколько:</label>
                         <input type="number" id="request-payment_how-many" required min="1000" max="75000">
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_phone-number">Номер телефона:</label>
                         <input type="text" id="request-payment_phone-number">
                     </li>
-                    <li>
+                    <li class="form__item">
                         <label for="request-payment_email">Электронная почта:</label>
                         <input type="email" id="request-payment_email" placeholder="Для уведомлений об оплате" required>
                     </li>
-                    <li>
-                        <div class="beautiful_button">
+                    <li class="form__item">
+                        <div class="button_beautiful">
                             <button class="submit" type="submit"><strong>Создать платёж</strong></button>
                         </div>
                     </li>
                 </ul>
             </form>
         </section>
-        <section class="company-info">
+        <section class="company">
             <h3><a name="company-info">О компании ИП Бородин Георгий Дмитриевич</a></h3>
-            <div class="services">
-                <div class="service">
-                    <div class="image_container">
-                        <img class="image_services" src="images/ring.jpg" alt="кольцо из монеты">
+            <div class="company__services">
+                <div class="company__service service">
+                    <div class="service__image-container">
+                        <img class="service__image" src="images/ring.jpg" alt="кольцо из монеты">
                     </div>
-                    <div class="service__name"><p>Кольцо из настоящего франка.</p></div>
+                    <div class="service__name"><p>Коль&shy;цо из на&shy;сто&shy;я&shy;ще&shy;го фран&shy;ка.</p></div>
                     <div class="service__price"><p>3200₽</p></div>
                 </div>
-                <div class="service">
-                    <div class="image_container">
-                        <img class="image_services" src="images/cookies.jpg" alt="овсяное печенье">
+                <div class="company__service service">
+                    <div class="service__image-container">
+                        <img class="service__image" src="images/cookies.jpg" alt="овсяное печенье">
                     </div>
-                    <div class="service__name"><p>Овсяное печенье с кусочками темного шоколада.</p></div>
+                    <div class="service__name"><p>Ов&shy;ся&shy;ное пе&shy;че&shy;нье с
+                        ку&shy;соч&shy;ка&shy;ми тем&shy;но&shy;го шо&shy;ко&shy;ла&shy;да.</p></div>
                     <div class="service__price"><p>99₽</p></div>
                 </div>
-                <div class="service">
-                    <div class="image_container">
-                        <img class="image_services" src="images/notebook.jpg" alt="блокнот">
+                <div class="company__service service">
+                    <div class="service__image-container">
+                        <img class="service__image" src="images/notebook.jpg" alt="блокнот">
                     </div>
-                    <div class="service__name"><p>Многие думают...</p></div>
+                    <div class="service__name"><p>Мно&shy;гие ду&shy;ма&shy;ют...</p></div>
                     <div class="service__price"><p>490₽</p></div>
                 </div>
             </div>
@@ -198,11 +199,11 @@
 <hr>
 <footer>
     <a href="http://vk.com/share.php?url=http://" target="_blank"
-       class="shareButton vk"><span class="fa fa-vk"></span> Поделиться</a>
+       class="button_share vk"><span class="fa fa-vk"></span> Поделиться</a>
     <a href="https://facebook.com/sharer.php?url=http://" target="_blank"
-       class="shareButton facebook"><span class="fa fa-facebook"></span> Поделиться</a>
+       class="button_share facebook"><span class="fa fa-facebook"></span> Поделиться</a>
     <a href="https://twitter.com/intent/tweet?url=http://" target="_blank"
-       class="shareButton twitter"><span class="fa fa-twitter"></span> Твитнуть</a>
+       class="button_share twitter"><span class="fa fa-twitter"></span> Твитнуть</a>
 </footer>
 </body>
 </html>
