@@ -49,6 +49,7 @@ main,
 .header__link,
 footer a
 {
+    text-decoration: none;
     color: #0572c1;
 }
 
